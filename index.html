@@ -214,8 +214,11 @@ function renderHistory() {
     <span class="link" onclick="renderMain()">← Back</span>
   `;
 }
-
-
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js");
+}
+</script>
   
   
 loadState();
